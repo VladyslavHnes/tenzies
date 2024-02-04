@@ -6,6 +6,8 @@ function App() {
   const randomNumbers = Array.from({ length: 10 }, () => Math.floor(Math.random() * 6) + 1);
   let dice = randomNumbers.map(num =>  <Die value={num}/>)
 
+  console.log(window.innerWidth)
+
   return (
     <>
       <main>
