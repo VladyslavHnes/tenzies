@@ -13,7 +13,7 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 5vh;
-  min-width: 40%
+  min-width: 400px;
 }
 
 .dice {
@@ -29,6 +29,7 @@ main {
   padding: 3vh;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
   background-color: #F5F5F5;
+  border-radius: 5px;
 }
 
 .die > p {
@@ -55,9 +56,3 @@ button {
   }
 }
 
-Responsive layout for screens between 601px and 900px
-@media (min-width: 851px) and (max-width: 900px) {
-  .dice {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
