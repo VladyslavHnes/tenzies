@@ -1,15 +1,18 @@
 import { useState } from 'react'
+import Die from './Die'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const randomNumbers = Array.from({ length: 10 }, () => Math.floor(Math.random() * 6) + 1);
+  let dice = randomNumbers.map(num =>  <Die value={num}/>)
 
   return (
     <>
       <main>
           <h1>Tenzies</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quisquam dolor autem et ipsam dolorum quas eius accusamus distinctio delectus alias nisi veniam, dolorem consequatur possimus amet esse! Amet, iusto?</p>
-          <div className='tenzies'>
-            
+          <p className='description'>Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+          <div className='dice'>
+            {dice}
           </div>
           <button>New Game</button>
       </main>
